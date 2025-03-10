@@ -18,12 +18,11 @@ Este projeto consiste na visualização de uma tabela com dados de funcionários
 
 ## Instruções para Rodar a Aplicação
 
-1. Clone o seguinte repositório na sua máquina para ter acesso aos dados que virão da API: `git clone https://github.com/BeMobile/teste-pratico-frontend.git`.
-2. Clone o seguinte repositório na sua máquina para baixar o projeto: `git clone https://github.com/pedrotiburcio/teste-frontend-betalent.git`.
-3. Navegue até a pasta onde se encontra o projeto que simula o servidor, instale as dependências `npm install` ou `yarn install` e em seguida inicie o json-server: `json-server --watch db.json`
-
-4. Navegue até a pasta do projeto `cd [nome da pasta do projeto]`, instale as dependências `npm install` ou `yarn install` e em seguida inicie a aplicação React: `npm start` ou `yarn start`
-5. Acesse a aplicação em `http://localhost:3000` ou em outro endereço especificado no momento da execução, no seu navegador.
+1.  Clone o seguinte repositório na sua máquina para ter acesso aos dados da API simulada: `git clone https://github.com/BeMobile/desafio-front-end.git`.
+2.  Navegue até a pasta do repositório clonado no passo 1 e inicie o json-server: `json-server --watch db.json`
+3.  Clone o seguinte repositório na sua máquina para baixar o projeto: `git clone https://github.com/pedrotiburcio/teste-frontend-betalent.git`.
+4.  Navegue até a pasta do projeto clonado no passo 3 `cd [nome da pasta do projeto]`, instale as dependências `npm install` ou `yarn install` e em seguida inicie a aplicação React: `npm start` ou `yarn start`
+5.  Acesse a aplicação em `http://localhost:3000` ou em outro endereço especificado no momento da execução, no seu navegador.
 
 ## Estrutura de Pastas
 
