@@ -1,13 +1,339 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('./fonts/HelveticaNeueRoman.otf') format('opentype');
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+    font-family: 'Helvetica Medium';
+    src: url('./fonts/HelveticaNeue-Medium.otf') format('opentype');
+}
+
+:root {
+    --background-color: #F0F0F0;
+    --blue-primary-color: #0500FF;
+    --white-color: #fff;
+    --text-color: #1c1c1c;
+    --placeholder-color: #9E9E9E;
+    --border-color: #DFDFDF;
+    --shadow-color: #00000033;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    max-height: 800px;
+    height: 100%;
+    margin: 0 auto 81px auto;
+    background-color: var(--background-color);
+}
+
+header {
+    background-color: var(--white-color);
+    box-shadow: 0 2px 8px 0 var(--shadow-color);
+    padding: 22.5px 0px 23.5px 31.5px;
+    max-width: 1024px;
+    width: 100%;
+    height: 60px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.header-logo {
+    height: 14px;
+}
+
+.search-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 112px;
+    margin: 0 32px;
+    position: relative;
+}
+
+.search-area h1 {
+    font-family: "Helvetica Medium", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+.search-area input {
+    background-color: var(--white-color);
+    color: var(--placeholder-color);
+    font-size: 16px;
+    padding: 12px 16px;
+    width: 287px;
+    height: 48px;
+    border: none;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.search-area input::placeholder {
+    color: var(--placeholder-color);
+    opacity: 1;
+}
+.search-area input:focus {
+    outline-color: var(--blue-primary-color);
+}
+.search-area span {
+    position: absolute;
+    right: 16px;
+    top: 44px;
+}
+
+#employees-table {
+    text-align: left;
+    font-size: 16px;
+    border-collapse: collapse;
+    background-color: var(--background-color);
+    margin: 0 auto;
+}
+
+#employees-table thead {
+    height: 47px;
+    background-color: var(--blue-primary-color);
+    color: var(--white-color);
+    box-shadow: 0 1px 2px 0 var(--shadow-color);
+    display: block;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+#employees-table thead tr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+#employees-table thead th {
+    font-family: "Helvetica Medium", sans-serif;
+    font-weight: 500;
+    text-align: left;
+}
+
+.photo-col {
+    width: 152px;
+    padding-left: 32px;
+}
+
+.name-col {
+    width: 230px;
+}
+
+.job-col {
+    width: 187px;
+}
+
+.date-col {
+    width: 216px;
+}
+
+.phone-col {
+    width: 174px;
+    padding-right: 32px;
+}
+
+.photo-col, .name-col, .job-col, .date-col, .phone-col {
+    height: 20px;
+}
+
+#employees-table tbody {
+    display: block;
+    color: var(--text-color);
+    background-color: var(--white-color);
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+#employees-table tbody tr {
+    height: 49px;
+    box-shadow: 0 1px 2px 0 var(--shadow-color);
+}
+
+.photo {
+    width: 34px;
+    height: 34px;
+    border-radius: 100%;
+}
+
+/* mobile */
+@media (max-width: 767px) {
+    .container {
+        padding: 0px 20px 162px 20px;
+        margin: 0;
+        width: 100%;
+        max-height: 100%;
+        background-color: var(--background-color);
+    }
+
+    header {
+        padding-left: 21.5px;
+    }
+
+    .search-area {
+        flex-direction: column;
+        height: 140px;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .search-area h1 {
+        align-self: flex-start;
+        margin: 24px 0px;
+    }
+
+    .search-area input {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .search-area span {
+        right: 16px;
+        top: 84px;
+    }
+
+    #employees-table {
+        width: 100%;
+    }
+
+    #employees-table thead {
+        padding: 14px 14.5px;
+    }
+
+    #employees-table tbody tr {
+        height: auto;
+    }
+
+    .photo-col {
+        width: auto;
+        padding-right: 24px;
+        padding-left: 0px;
+    }
+
+    .name-col {
+        width: auto;
+        padding-right: 60.5px;
+    }
+
+    .circle-icon {
+        margin-left: 106.5px;
+        margin-right: 14px;
+        color: var(--white-color);
+        width: 8px;
+        height: 8px;
+    }
+
+    .card-cover {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 13.5px 23.5px 12.5px 16px;
+        height: 60px;
+        box-shadow: 0px 1px 2px 0px var(--shadow-color);
+    }
+
+    .card-cover.open {
+        flex-direction: column;
+        padding-bottom: 0px;
+    }
+
+    .card-person {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 34px;
+    }
+
+    .card-person .person {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .card-person .photo {
+        margin-right: 24px;
+    }
+
+    .card-button {
+        background-color: transparent;
+        border: none;
+        width: 17px;
+        height: 9px;
+        cursor: pointer;
+    }
+
+    .card-button img {
+        max-width: 100%;
+    }
+
+    .card-content {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        border-bottom: 1px dashed var(--border-color);
+        height: auto;
+        width: 100%;
+    }
+
+    .card-job {
+        padding-top: 31.5px;
+    }
+
+    .card-date {
+        padding-top: 15px;
+    }
+
+    .card-phone {
+        padding-top: 15px;
+        margin-bottom: 31px;
+    }
+
+    .card-cover.open + .card-content.card-job,
+    .card-cover.open + .card-content.card-date,
+    .card-cover.open + .card-content.card-phone {
+        max-height: 200px;
+    }
+
+    h2.card-label {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    h3.card-value, .card-person .name {
+        font-size: 16px;
+        font-weight: normal;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .search-area {
+        margin: 0;
+    }
+
+    #employees-table {
+        width: 100%;
+    }
+
+    .photo-col, .name-col, .job-col, .date-col, .phone-col {
+        width: 20%;
+        height: auto;
+    }
 }
